@@ -1,0 +1,261 @@
+﻿
+@model Evim.UI.ViewModels.IndexVM
+
+<div class="container-xxl bg-white p-0">
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+    <!-- Header Start -->
+
+
+    @foreach (Slide s in Model.Slides)
+    {
+        <partial name="_Slide" model="s" />
+    }
+
+    <!-- Header End -->
+    <!-- Category Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h1 class="mb-3">Mülk Tipleri</h1>
+                <p>Aşağıdaki menüden istediğiniz mülk tipini kolayca seçerek filtreleme yapabilirsiniz.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <a asp-controller="Daire" asp-action="Index" class="cat-item d-block bg-light text-center rounded p-3">
+                        <div class="rounded p-4">
+                            <div class="icon mb-3">
+                                <img class="img-fluid" src="img/icon-apartment.png" alt="Icon">
+                            </div>
+                            <h6>Daire</h6>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <a asp-controller="Villa" asp-action="Index" class="cat-item d-block bg-light text-center rounded p-3">
+                        <div class="rounded p-4">
+                            <div class="icon mb-3">
+                                <img class="img-fluid" src="img/icon-villa.png" alt="Icon">
+                            </div>
+                            <h6>Villa</h6>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <a asp-controller="MustakilEv" asp-action="Index" class="cat-item d-block bg-light text-center rounded p-3">
+                        <div class="rounded p-4">
+                            <div class="icon mb-3">
+                                <img class="img-fluid" src="img/icon-house.png" alt="Icon">
+                            </div>
+                            <h6>Müstakil Ev</h6>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <a asp-controller="Ofis" asp-action="Index" class="cat-item d-block bg-light text-center rounded p-3">
+                        <div class="rounded p-4">
+                            <div class="icon mb-3">
+                                <img class="img-fluid" src="img/icon-housing.png" alt="Icon">
+                            </div>
+                            <h6>Ofis</h6>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <a asp-controller="Bina" asp-action="Index" class="cat-item d-block bg-light text-center rounded p-3">
+                        <div class="rounded p-4">
+                            <div class="icon mb-3">
+                                <img class="img-fluid" src="img/icon-building.png" alt="Icon">
+                            </div>
+                            <h6>Bina</h6>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <a asp-controller="KoyEvi" asp-action="Index" class="cat-item d-block bg-light text-center rounded p-3">
+                        <div class="rounded p-4">
+                            <div class="icon mb-3">
+                                <img class="img-fluid" src="img/icon-neighborhood.png" alt="Icon">
+                            </div>
+                            <h6>Köy Evi</h6>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <a asp-controller="Magaza" asp-action="Index" class="cat-item d-block bg-light text-center rounded p-3">
+                        <div class="rounded p-4">
+                            <div class="icon mb-3">
+                                <img class="img-fluid" src="img/icon-condominium.png" alt="Icon">
+                            </div>
+                            <h6>Mağaza/Dükkan</h6>
+
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <a asp-controller="Garaj" asp-action="Index" class="cat-item d-block bg-light text-center rounded p-3">
+                        <div class="rounded p-4">
+                            <div class="icon mb-3">
+                                <img class="img-fluid" src="img/icon-luxury.png" alt="Icon">
+                            </div>
+                            <h6>Garaj</h6>
+
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Category End -->
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="about-img position-relative overflow-hidden p-5 pe-0">
+                        <img class="img-fluid w-100" src="img/about.jpg">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <h1 class="mb-4">Neden Biz?</h1>
+                    <p class="mb-4">Sizlere, sadece bir ev değil, aynı zamanda bir yaşam tarzı sunuyoruz. Aile dostu mahallelerden modern şehir merkezine, doğayla iç içe villalardan şık dairelere kadar geniş bir portföyümüz var. Evinizin kapılarını araladığınızda, mutlu bir yaşam sizi bekliyor olacak.</p>
+                    <p><i class="fa fa-check text-primary me-3"></i>Düşük Komisyon Oranları</p>
+                    <p><i class="fa fa-check text-primary me-3"></i>Kolay Halledilen Evrak İşleri</p>
+                    <p><i class="fa fa-check text-primary me-3"></i>%100 Garantili</p>
+                    <a asp-controller="DahaFazla" asp-action="Index" class="btn btn-primary py-3 px-5 mt-3" >Daha Fazla</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+    <!-- Property List Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-0 gx-5 align-items-center justify-content-center">
+                <div class="col-lg-6">
+                    <div class="text-center mb-5 wow slideInLeft" data-wow-delay="0.1s">
+                        <h1 class="mb-3">Kiralık veya Satılık Mülker</h1>
+                        <p>Aradığınız mülk hemen yakınınızda olabilir. Aşağıda sergilenen mülkerden birini seç ve hemen bize ulaş !</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content">
+                <div id="tab-1" class="tab-pane fade show p-0 active">
+                    <div class="row g-4">
+                        @foreach (Product p in Model.Products)
+                        {
+                            <partial name="_Product" model="p" />
+                        }
+                        <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
+                            <a asp-controller="DahaFazla" asp-action="Index" class="btn btn-primary py-3 px-5" >Daha Fazla Mülk Görüntüle</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Property List End -->
+    <!-- Call to Action Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="bg-light rounded p-3">
+                <div class="bg-white rounded p-4" style="border: 1px dashed rgba(0, 185, 142, .3)">
+                    <div class="row g-5 align-items-center">
+                        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                            <img class="img-fluid rounded w-100" src="img/call-to-action.jpg" alt="">
+                        </div>
+                        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                            <div class="mb-4">
+                                <h1 class="mb-3">Mülkler için bizimle iletişime geçin !</h1>
+                                <p>Menümüzde bulunan "İletişim" bölümüne tıklayarak bizimle kolayca iletişime geçip, kendi mülk ilanınız veya başka bir mülk ilanıyla ilgili bilgi alabilirsiniz. </p>
+                            </div>
+                            <a asp-controller="İletisim" asp-action="Index" class="btn btn-primary py-3 px-4 me-2"><i class="fa fa-phone-alt me-2"></i>Bize Ulaşın</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Call to Action End -->
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h1 class="mb-3">Personellerimiz</h1>
+                <p>Sizler ve aileniz için en iyi mülkü bulacak ve size yardımcı olacak ekip arkadaşlarımız</p>
+            </div>
+            <div class="row g-4">
+
+                @foreach (Personel p in Model.Personels)
+                {
+                    <partial name="_Personel" model="p" />
+                }
+
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h1 class="mb-3">Danışanlarımız Ne Diyor ? </h1>
+                <p>Burada hizmet verdiğimiz danışmanlarımızın firmamız hakkında yaptıkları yorumlarını görebilirsiniz.</p>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                <div class="testimonial-item bg-light rounded p-3">
+                    <div class="bg-white border rounded p-4">
+                        <p>"Evim Real Estate, emlak sektöründeki lider konumunu hak ediyor. Müşteri memnuniyeti odaklı hizmet anlayışları, samimi ve güler yüzlü ekibi ile ev arayanlar için en doğru adres. Onların desteğiyle hayalimdeki evi buldum ve satın alma sürecindeki rehberlikleri benim için çok değerliydi. Teşekkürler Evim Real Estate!"</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-1.jpg" style="width: 45px; height: 45px;">
+                            <div class="ps-3">
+                                <h6 class="fw-bold mb-1">Ayşe Hamitoğlu</h6>
+                                <small>Profession</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item bg-light rounded p-3">
+                    <div class="bg-white border rounded p-4">
+                        <p>"Evim Real Estate, hayalimdeki evi bulmam konusunda inanılmaz bir yardımcı oldu! Profesyonel ekibi, hızlı ve güvenilir hizmetleriyle gerçekten etkileyici. İhtiyaçlarım doğrultusunda en uygun evi bulmamı sağladılar. Herkese gönül rahatlığıyla tavsiye ederim!"</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-2.jpg" style="width: 45px; height: 45px;">
+                            <div class="ps-3">
+                                <h6 class="fw-bold mb-1">Mehmet Türk</h6>
+                                <small>Profession</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item bg-light rounded p-3">
+                    <div class="bg-white border rounded p-4">
+                        <p>"Evim Real Estate, profesyonel yaklaşımları, geniş portföyleri ve hızlı çözümleriyle benim için mükemmel bir emlak deneyimi sağladı. Ekibin samimiyeti, güvenilirliği ve bilgi birikimi, ev arama sürecimi oldukça kolaylaştırdı. Firmalarını herkese tavsiye ediyorum. Başarılarınızın devamını dilerim!"</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-3.jpg" style="width: 45px; height: 45px;">
+                            <div class="ps-3">
+                                <h6 class="fw-bold mb-1">Ahmet Hacı</h6>
+                                <small>Profession</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+</div>

@@ -1,0 +1,72 @@
+﻿@model MulkEkleVM
+
+<div class="container mt-5 text-center">
+    <h2 class="mb-4">Evim Real Estate Mülk İnceleme Formu</h2>
+    <h5 class="mb-4">Mülkünüzün portföyümüze uygun olup olmadığı incelenip olumlu olduğu halde size geri dönüş yapılacaktır.</h5>
+    <h4 class="mb-4">Portföy için uygun olmanız durumunda, ekibimiz mülkün fotoğraf çekimini adreste gerçekleştirecektir.</h4>
+    <form enctype="multipart/form-data" asp-controller="MulkEkle" asp-action="Insert" method="post">
+        <div class="form-group mb-3">
+            <label for="fullName">Adı Soyadı:</label>
+            <input asp-for="@Model.MulkEkle.NameSurname" type="text" class="form-control" id="fullName" placeholder="Adınızı ve Soyadınızı Girin" required>
+            <span asp-validation-for="@Model.MulkEkle.NameSurname"></span>
+        </div>
+        <div class="form-group mb-3">
+            <label for="email">Mail Adresi:</label>
+            <input asp-for="@Model.MulkEkle.Email" type="email" class="form-control" id="email" placeholder="Mail Adresinizi Girin" required>
+            <span asp-validation-for="@Model.MulkEkle.Email"></span>
+        </div>
+        <div class="form-group mb-3">
+            <label for="phone">Telefon Numarası:</label>
+            <input asp-for="@Model.MulkEkle.TelNumber" type="tel" class="form-control" id="phone" placeholder="Telefon Numaranızı Girin" required>
+            <span asp-validation-for="@Model.MulkEkle.TelNumber"></span>
+        </div>
+        <div class="form-group mb-3">
+            <label for="property">Mülk İsmi:</label>
+            <input asp-for="@Model.MulkEkle.MulkName" type="text" class="form-control" id="property" placeholder="Mülk İsmi Girin" required>
+            <span asp-validation-for="@Model.MulkEkle.MulkName"></span>
+        </div>
+        <div class="form-group mb-3">
+            <label for="price">Fiyatı:</label>
+            <input asp-for="@Model.MulkEkle.Fiyat" type="text" class="form-control" id="price" placeholder="Fiyatı Girin" required>
+            <span asp-validation-for="@Model.MulkEkle.Fiyat"></span>
+        </div>
+        <div class="form-group mb-3">
+            <label for="address">Adres:</label>
+            <input asp-for="@Model.MulkEkle.Adres" type="text" class="form-control" id="address" placeholder="Adresi Girin" required>
+            <span asp-validation-for="@Model.MulkEkle.Adres"></span>
+        </div>
+        <div class="form-group mb-3">
+            <label for="area">Metrekare:</label>
+            <input asp-for="@Model.MulkEkle.Metrekare" type="number" class="form-control" id="area" placeholder="Metrekare Girin" required>
+            <span asp-validation-for="@Model.MulkEkle.Metrekare"></span>
+        </div>
+        <div class="form-group mb-3">
+            <label for="bedrooms">Yatak Odası Sayısı:</label>
+            <input asp-for="@Model.MulkEkle.YatakOdasi" type="number" class="form-control" id="bedrooms" placeholder="Yatak Odası Sayısını Girin" required>
+            <span asp-validation-for="@Model.MulkEkle.YatakOdasi"></span>
+        </div>
+        <div class="form-group mb-3">
+            <label for="bathrooms">Banyo Sayısı:</label>
+            <input asp-for="@Model.MulkEkle.Banyo" type="number" class="form-control" id="bathrooms" placeholder="Banyo Sayısını Girin" required>
+            <span asp-validation-for="@Model.MulkEkle.Banyo"></span>
+        </div>
+        <div class="form-group mb-3">
+            <label for="status">Evin Durumu:</label>
+            <select asp-for="@Model.MulkEkle.Durum" class="form-control" id="status" required>
+                <option value="satilik">Satılık</option>
+                <option value="kiralik">Kiralık</option>
+            </select>
+        </div>
+        <div class="form-group mb-3">
+            <label for="houseType">Evin Türü:</label>
+            <select asp-for="@Model.MulkEkle.Tur" class="form-control" id="houseType" required>
+                <option value="villa">Villa</option>
+                <option value="apartman">Apartman</option>
+                <option value="dubleks">Dubleks</option>
+                <option value="mustakil">Mustakil Ev</option>
+                
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg">Formu Gönder</button>
+    </form>
+</div>

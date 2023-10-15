@@ -1,0 +1,68 @@
+﻿  <!-- page content -->
+
+@model IEnumerable<MulkEkle>
+<div class="right_col" role="main">
+    <div class="">
+
+        <div class="row" style="display: block;">
+
+            <div class="col-md-12 col-sm-12  ">
+                <div class="x_panel">
+                    <div class="col-md-6 col-sm-6">
+                        <h2>Mülk Değerlendirme Talepleri</h2>
+                    </div>
+                  
+                    <div class="x_content">
+
+                        <div class="table-responsive">
+                            <table class="table table-striped jambo_table bulk_action">
+                                <thead>
+                                    <tr class="headings">
+
+                                        <th class="column-title">Ad Soyad </th>
+                                        <th class="column-title">E-Mail </th>
+                                        <th class="column-title">Telefon </th>
+                                        <th class="column-title">Mülk Adı </th>
+                                        <th class="column-title">Fiyatı</th>
+                                        <th class="column-title">Adres </th>
+                                        <th class="column-title">Yatak Odası </th>
+                                        <th class="column-title">Banyo </th>
+                                        <th class="column-title">Durum </th>
+                                        <th class="column-title">Tür </th>
+                                        <th></th>
+
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    @foreach (MulkEkle m in Model)
+                                    {
+                                        <tr class="even pointer">
+                                            
+                                            <td class=" ">@m.NameSurname</td>
+                                            <td class=" ">@m.Email</td>
+                                            <td class=" ">@m.TelNumber</td>
+                                            <td class=" ">@m.MulkName</td>
+                                            <td class=" ">@m.FiyatFormatted</td>
+                                            <td class=" ">@m.Adres</td>
+                                            <td class=" ">@m.YatakOdasi</td>
+                                            <td class=" ">@m.Banyo</td>
+                                            <td class=" ">@m.Durum</td>
+                                            <td class=" ">@m.Tur</td>
+                                            
+                                        </tr>
+                                    }
+
+                                </tbody>
+
+                            </table>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /page content -->  <!-- page content -->

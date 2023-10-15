@@ -1,0 +1,61 @@
+﻿  <!-- page content -->
+
+@model IEnumerable<Product>
+<div class="right_col" role="main">
+    <div class="">
+
+        <div class="row" style="display: block;">
+
+            <div class="col-md-12 col-sm-12  ">
+                <div class="x_panel">
+                    <div class="col-md-6 col-sm-6">
+                        <h2>Ürün Yönetimi</h2>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <a asp-controller="Product" asp-action="New" class="btn btn-success float-right" style="color:#fff">Yeni Ürün Ekle</a>
+                    </div>
+
+
+                    <div class="x_content">
+
+                        <div class="table-responsive">
+                            <table class="table table-striped jambo_table bulk_action">
+                                <thead>
+                                    <tr class="headings">
+                                        <th class="column-title">Mülk Adı </th>
+                                        <th class="column-title">Fiyat </th>
+                                        <th class="column-title">Adres </th>
+                                        <th class="column-title">Yatak Odası </th>
+                                        <th class="column-title">Banyo </th>
+                                        <th class="column-title">Fotoğraflar </th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    @foreach (Product s in Model)
+                                    {
+                                        <tr class="even pointer">
+                                            <td class=" "><a asp-controller="Product" asp-action="Edit" asp-route-id="@s.ID">@s.Name</a></td>
+                                            <td class=" ">@s.Fiyat</td>
+                                            <td class=" ">@s.Adres</td>
+                                            <td class=" ">@s.YatakOdasi</td>
+                                            <td class=" ">@s.Banyo</td>  
+                                            <td><a asp-controller="ProductPicture" asp-action="Index" asp-route-productid="@s.ID">Ürüne Ait Resimler</a></td>
+
+                                            <td><a asp-controller="Product" asp-action="Delete" asp-route-id="@s.ID" class="btn btn-danger">Sil</a></td>
+
+                                        </tr>
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /page content -->  <!-- page content -->

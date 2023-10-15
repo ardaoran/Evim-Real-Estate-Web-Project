@@ -1,0 +1,21 @@
+﻿
+@model Personel
+<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="team-item rounded overflow-hidden">
+        <div class="position-relative">
+            @if (Model.PersonelPictures.Any())
+            {
+                <img class="img-fluid" src="@Model.PersonelPictures.FirstOrDefault().Picture" alt="">
+            }
+
+        <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+            <a class="btn btn-outline-light btn-social" href="https://github.com/ardaoran"><i class="fab fa-github"></i></a>
+            <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/in/ardaoran/"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        </div>
+        <div class="text-center p-4 mt-3">
+            <h5 class="fw-bold mb-0">@Model.NameSurname</h5>
+            <small>@Model.Gorev</small>
+        </div>
+    </div>
+</div>

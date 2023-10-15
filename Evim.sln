@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Evim.BL", "Evim.BL\Evim.BL.csproj", "{483ACC84-CFE5-4D60-8615-7B72B27CC930}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Evim.DAL", "Evim.DAL\Evim.DAL.csproj", "{479E944F-F8B2-4795-9FEF-8BA26AB73A6D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Evim.UI", "Evim.UI\Evim.UI.csproj", "{04700734-94DC-4566-9FDE-95D7E42E6461}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{483ACC84-CFE5-4D60-8615-7B72B27CC930}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{483ACC84-CFE5-4D60-8615-7B72B27CC930}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{483ACC84-CFE5-4D60-8615-7B72B27CC930}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{483ACC84-CFE5-4D60-8615-7B72B27CC930}.Release|Any CPU.Build.0 = Release|Any CPU
+		{479E944F-F8B2-4795-9FEF-8BA26AB73A6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{479E944F-F8B2-4795-9FEF-8BA26AB73A6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{479E944F-F8B2-4795-9FEF-8BA26AB73A6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{479E944F-F8B2-4795-9FEF-8BA26AB73A6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04700734-94DC-4566-9FDE-95D7E42E6461}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04700734-94DC-4566-9FDE-95D7E42E6461}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04700734-94DC-4566-9FDE-95D7E42E6461}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04700734-94DC-4566-9FDE-95D7E42E6461}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8D562838-8B2E-48AB-9AC6-98024E5B77E0}
+	EndGlobalSection
+EndGlobal

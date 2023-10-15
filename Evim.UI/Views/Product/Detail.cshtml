@@ -1,0 +1,53 @@
+﻿
+@model ProductVM
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-6">
+            <div id="property-carousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    @if (Model.Product.ProductPictures.Any())
+                    {
+                        <div class="carousel-item active">
+                            <img src="@Model.Product.ProductPictures.FirstOrDefault().Picture" class="d-block w-100" alt="@Model.Product.Name">
+                        </div>
+
+                        @foreach (ProductPicture pp in Model.Product.ProductPictures.Skip(1))
+                        {
+                            <div class="carousel-item">
+                                <img src="@pp.Picture" class="d-block w-100" alt="@pp.Name">
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <div class="carousel-item active">
+                            <img class="w-100 h-100" src="/img/hazirlaniyor.png" alt="@Model.Product.Name">
+                        </div>
+                    }
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#property-carousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Önceki</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#property-carousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Sonraki</span>
+                </button>
+            </div>
+        </div>
+  
+        
+        <div class="col-lg-6">
+            <h2>@Model.Product.Name</h2>
+            <h2>@Model.Product.Durum</h2>
+            <h2>@Model.Product.Tur</h2>
+            <p><strong>Fiyat:</strong> @Model.Product.FiyatFormatted</p>
+            <p><strong>Adres:</strong> @Model.Product.Adres</p>
+            <p><strong>Metrekare:</strong> @Model.Product.Metrekare m²</p>
+            <p><strong>Yatak Odası Sayısı:</strong> @Model.Product.YatakOdasi</p>
+            <p><strong>Banyo Sayısı:</strong> @Model.Product.Banyo</p>
+            
+        </div>
+    </div>
+</div>

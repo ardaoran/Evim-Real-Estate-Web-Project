@@ -1,0 +1,43 @@
+﻿<style>
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .map-container {
+        position: relative;
+        padding-bottom: 75%; 
+        overflow: hidden;
+    }
+
+    .map {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    #map {
+        height: 400px;
+        width: 100%;
+    }
+</style>
+
+
+<body>
+    <div class="container mt-5">
+        <h2>İletişim</h2>
+        <address>
+            <strong>Adres:</strong> 1234 Emlak Caddesi, Şehir, Ülke, Posta Kodu<br>
+            <strong>Telefon:</strong> (123) 456-7890<br>
+            <strong>E-posta:</strong> info@evimrealestate.com
+        </address>
+
+        <div id="map" class="map-container">
+            <iframe class="map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.0332188727184!2d29.00713651576995!3d40.99008004210427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cabdd94b3d02ff%3A0x4b70a27b962e2e87!2sOsmana%C4%9Fa%20Mah.%20S%C3%B6%C4%9F%C3%BCtl%C3%BC%20%C3%87e%C5%9Fme%20Cd.%20No%3A31%2C%20Kad%C4%B1k%C3%B6y%2F%C4%B0stanbul!5e0!3m2!1str!2str!4v1632418122150!5m2!1str!2str"
+                    allowfullscreen></iframe>
+        </div>
+    </div>
+</body>
